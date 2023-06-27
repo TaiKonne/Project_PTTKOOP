@@ -36,10 +36,10 @@ public class TAIKHOAN {
     public void setIdUser(String IdUser) {
         this.IdUser = IdUser;
     }
-    public String getT() {
+    public String getTaiKhoan() {
         return this.TaiKhoan;
     }
-    public void setTAIKHOAN(String TAIKHOAN) {
+    public void setTaiKhoan(String TAIKHOAN) {
         this.TaiKhoan = TAIKHOAN;
     }
     public String getMatKhau() {
