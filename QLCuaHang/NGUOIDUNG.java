@@ -18,6 +18,7 @@ public class NGUOIDUNG {
         users.add(new NGUOIDUNG("U0003", "Nguyen Minh Thang", "0901222343", 1, "Binh Duong"));
         users.add(new NGUOIDUNG("U0004", "Nguyen Van Minh", "0900987654", 1, "Binh Duong"));
         users.add(new NGUOIDUNG("U0005", "Le Tuan Kiet", "0999999999", 1, "Binh Duong"));
+        // test
     }
     public NGUOIDUNG(String IdUser, String HoTen, String SoDienThoai, int GioiTinh, String DiaChi) {
         this.IdUser = IdUser;
