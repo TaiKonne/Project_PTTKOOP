@@ -8,7 +8,7 @@ public class testStore {
         int j=0;
         while (true) {
             System.out.println("Chon " + '\n' + '\t' + "1. Dang Nhap" + '\n' + '\t' + "2. Dang Ky" + '\n' + '\t' + "0. Thoat");
-            System.out.print("-->");
+            System.out.print("--> ");
             int k = sc.nextInt();
             if (k == 1) {
                 NGUOIDUNG a = new NGUOIDUNG();
@@ -43,10 +43,11 @@ public class testStore {
         System.out.println(j);
         if(j==1)
         {
-            while(true)
-            {
-                System.out.println("Chon: " + '\n' + '\t' + "1. A" + '\n' + '\t' + "2. B" + '\n' + '\t' + "0. Thoat");
-            }
+            System.out.println("Chon: " + '\n' + '\t' + "1. A" + '\n' + '\t' + "2. B" + '\n' + '\t' + "0. Thoat");
+            // while(true)
+            // {
+            //     System.out.println("Chon: " + '\n' + '\t' + "1. A" + '\n' + '\t' + "2. B" + '\n' + '\t' + "0. Thoat");
+            // }
         }
     }
 }
