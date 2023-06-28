@@ -1,0 +1,6 @@
+U0001|Nguyen Quoc Dung|0901291640|1|Thu Dau Mot
+U0002|Nguyen Tan Tai|0901291640|1|Tan Uyen
+U0003|Nguyen Minh Thang|0901291640|1|Thu Dau Mot
+U0004|Nguyen Van Minh|0901291640|1|Thu Dau Mot
+U0005|Le Tuan Kiet|0901291640|1|Di An
+U0006|Dang Ba Quoc Trung|0901291640|1|Binh Phuoc
