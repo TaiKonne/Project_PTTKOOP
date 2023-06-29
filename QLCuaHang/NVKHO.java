@@ -5,7 +5,7 @@ public class NVKHO extends NGUOIDUNG{
     
     public NVKHO() {
     }
-
+    
     public NVKHO(String manv) {
         this.manv = manv;
     }

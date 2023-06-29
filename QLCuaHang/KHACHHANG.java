@@ -29,5 +29,4 @@ public class KHACHHANG extends NGUOIDUNG {
             " makh='" + getmakh() + "'" +
             "}";
     }
-    
 }

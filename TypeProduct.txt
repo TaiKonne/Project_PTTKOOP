@@ -1,0 +1,7 @@
+LSP001|NSX001|Thuc pham
+LSP002|NSX002|Gia dung
+LSP003|NSX003|Thoi trang
+LSP004|NSX004|Do dien tu
+LSP005|NSX005|Me va be
+LSP006|NSX006|Do choi va giao duc
+LSP007|NSX007|Suc khoe va lam dep
