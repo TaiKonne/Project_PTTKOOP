@@ -21,8 +21,7 @@ public class NGUOIDUNG {
         // users.add(new NGUOIDUNG("U0003", "Nguyen Minh Thang", "0901222343", 1, "Binh Duong"));
         // users.add(new NGUOIDUNG("U0004", "Nguyen Van Minh", "0900987654", 1, "Binh Duong"));
         // users.add(new NGUOIDUNG("U0005", "Le Tuan Kiet", "0999999999", 1, "Binh Duong"));
-        users.clear();
-        String filePath = "D:\\TDMU\\Nam2\\HK3\\PTTKDT\\Project\\code\\User.txt";
+        String filePath = "D:\\TDMU\\Nam2\\HK3\\PTTKDT\\Project\\code\\Project_PTTKOOP\\User.txt";
         try (FileReader fileReader = new FileReader(filePath); BufferedReader bufferedReader = new BufferedReader(fileReader)) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
@@ -73,14 +72,15 @@ public class NGUOIDUNG {
     public int DangNHap()  
     {
         TAIKHOAN x = new TAIKHOAN();
-        x.Updates();
-        for(int i=0;i<x.acc.size();i++) System.out.println(x.acc.get(i).getTaiKhoan());
+        for(int i=0;i<x.acc.size();i++) 
+            System.out.println(x.acc.get(i).getTaiKhoan());
+        
         System.out.println("Nhap Tai Khoan Mat Khau:");
         System.out.print("Tai khoan: "); String tk = sc.nextLine();
         System.out.print("Mat khau: "); String mk = sc.nextLine();
         int k=-1;
-        for(int i=0;i<TAIKHOAN.acc.size();i++){
-            if(tk.compareTo(TAIKHOAN.acc.get(i).getTaiKhoan())==0){
+        for(int i=0;i<x.acc.size();i++){
+            if(tk.compareTo(x.acc.get(i).getTaiKhoan())==0){
                 k=i;
                 break;
             }
@@ -90,9 +90,9 @@ public class NGUOIDUNG {
             return -1;
         }else 
         {
-            if(mk.compareTo(TAIKHOAN.acc.get(k).getMatKhau())==0){
+            if(mk.compareTo(x.acc.get(k).getMatKhau())==0){
                 System.out.println("Dang nhap thanh cong!");
-                return TAIKHOAN.acc.get(k).getMod();
+                return x.acc.get(k).getMod();
             }else{
                 System.out.println("Sai mat khau");
                 return -1;
@@ -133,20 +133,15 @@ public class NGUOIDUNG {
                 break;
             }
         }
-        //System.out.println(k); 
-        // for(int i=0;i<xxx.acc.size();i++) 
-        // {
-        //     System.out.println(xxx.acc.get(i).getTaiKhoan());
-        // }
         if(k==-1){
             if(mk.compareTo(nmk)==0){
                 System.out.println("Dang Ky Thanh Cong!");
                 String Id = XuLyIdUser();
                 String tmp = Id +"|"+tk+"|"+mk+"|"+"1";
-                String filePath = "D:\\TDMU\\Nam2\\HK3\\PTTKDT\\Project\\code\\UserAcc.txt";
+                String filePath = "D:\\TDMU\\Nam2\\HK3\\PTTKDT\\Project\\code\\Project_PTTKOOP\\UserAcc.txt";
                 //xxx.acc.add(new TAIKHOAN(Id,tk,mk,1));
                 try (FileWriter myWriter = new FileWriter(filePath, true)) {
-                    myWriter.write(tmp + '\n');
+                    myWriter.write('\n'+tmp);
                     myWriter.close();
                 } catch (IOException e) {
                     e.printStackTrace();
