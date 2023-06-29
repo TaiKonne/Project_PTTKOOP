@@ -16,11 +16,6 @@ public class NGUOIDUNG {
     protected String DiaChi;
     static ArrayList<NGUOIDUNG> users = new ArrayList<NGUOIDUNG>();
     public NGUOIDUNG() {
-        // users.add(new NGUOIDUNG("U0001", "Nguyen Quoc Dung", "0901291640", 1, "Binh Duong"));
-        // users.add(new NGUOIDUNG("U0002", "Nguyen Tan Tai", "0855708546", 1, "Binh Duong"));
-        // users.add(new NGUOIDUNG("U0003", "Nguyen Minh Thang", "0901222343", 1, "Binh Duong"));
-        // users.add(new NGUOIDUNG("U0004", "Nguyen Van Minh", "0900987654", 1, "Binh Duong"));
-        // users.add(new NGUOIDUNG("U0005", "Le Tuan Kiet", "0999999999", 1, "Binh Duong"));
         String filePath = "D:\\TDMU\\Nam2\\HK3\\PTTKDT\\Project\\code\\Project_PTTKOOP\\User.txt";
         try (FileReader fileReader = new FileReader(filePath); BufferedReader bufferedReader = new BufferedReader(fileReader)) {
             String line;
@@ -69,11 +64,11 @@ public class NGUOIDUNG {
     public void setDiaChi(String DiaChi) {
         this.DiaChi = DiaChi;
     }
-    public int DangNHap()  
+    public TAIKHOAN DangNHap()  
     {
         TAIKHOAN x = new TAIKHOAN();
-        for(int i=0;i<x.acc.size();i++) 
-            System.out.println(x.acc.get(i).getTaiKhoan());
+        // for(int i=0;i<x.acc.size();i++) 
+        //     System.out.println(x.acc.get(i).getTaiKhoan());
         
         System.out.println("Nhap Tai Khoan Mat Khau:");
         System.out.print("Tai khoan: "); String tk = sc.nextLine();
@@ -87,15 +82,16 @@ public class NGUOIDUNG {
         }
         if(k==-1){
             System.out.println("Tai khoan khong ton tai!");
-            return -1;
+            return null;
         }else 
         {
             if(mk.compareTo(x.acc.get(k).getMatKhau())==0){
                 System.out.println("Dang nhap thanh cong!");
-                return x.acc.get(k).getMod();
+                TAIKHOAN tmp = new TAIKHOAN(x.acc.get(k).getIdUser(), x.acc.get(k).getMod());
+                return tmp;
             }else{
                 System.out.println("Sai mat khau");
-                return -1;
+                return null;
             }
         }
     }

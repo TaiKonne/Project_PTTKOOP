@@ -44,6 +44,10 @@ public class TAIKHOAN {
         this.TaiKhoan = Tk;
         this.MatKhau = Mk;
     }
+    public TAIKHOAN(String Id, int mod) {
+        this.IdUser = Id;
+        this.mod = mod;
+    }
 
     public String getIdUser() {
         return this.IdUser;
