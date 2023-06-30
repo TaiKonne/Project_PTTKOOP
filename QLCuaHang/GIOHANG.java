@@ -62,12 +62,7 @@ public class GIOHANG {
     }
     @Override
     public String toString() {
-        return "{" +
-            " magh='" + getMagh() + "'" +
-            ", makh='" + getMakh() + "'" +
-            ", masp='" + getMasp() + "'" +
-            ", sl='" + getSl() + "'" +
-            "}";
+        return " "+ getMagh() + " " + getMakh() + " "  + getMasp() + " " + getSl();
     }
     
 }

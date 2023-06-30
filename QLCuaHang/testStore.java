@@ -30,21 +30,18 @@ public class testStore {
         if(j.getMod()==1)
         {
             KHACHHANG a = new KHACHHANG(j.getIdUser());
+            a.XemSanPham();
             while(true)
             {
-                System.out.println("Chon " + '\n' + '\t' + "1. Xem san pham" + '\n' + '\t' + "2. Tim kiem san pham" + '\n' + '\t' + "3. Them Vao gio hang"+ '\n' + '\t' + "0. Thoat");
+                System.out.println("Chon " + '\n' + '\t' + "1. Tim kiem san pham" + '\n' + '\t' + "2. Vao gio hang"+ '\n' + '\t' + "0. Thoat");
                 System.out.print("--> "); int k=sc.nextInt();
                 if(k==1)
                 {
-                    a.XemSanPham();
+                    a.TimKiemSanPham();
                 }
                 else if(k==2)
                 {
-                    a.TimKiem_Chon_SanPham();
-                }
-                else if(k==3)
-                {
-                    a.ThemSPvaoGioHang();
+                    a.XemGioHang();
                 }
                 else return;
             }
