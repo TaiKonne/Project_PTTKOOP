@@ -29,10 +29,24 @@ public class testStore {
         }
         if(j.getMod()==1)
         {
-            SANPHAM x = new SANPHAM();
-            for(int i=0;i<x.product.size();i++)
+            KHACHHANG a = new KHACHHANG(j.getIdUser());
+            while(true)
             {
-                System.out.println(x.product.get(i));
+                System.out.println("Chon " + '\n' + '\t' + "1. Xem san pham" + '\n' + '\t' + "2. Tim kiem san pham" + '\n' + '\t' + "3. Them Vao gio hang"+ '\n' + '\t' + "0. Thoat");
+                System.out.print("--> "); int k=sc.nextInt();
+                if(k==1)
+                {
+                    a.XemSanPham();
+                }
+                else if(k==2)
+                {
+                    a.TimKiem_Chon_SanPham();
+                }
+                else if(k==3)
+                {
+                    a.ThemSPvaoGioHang();
+                }
+                else return;
             }
         }
     }
