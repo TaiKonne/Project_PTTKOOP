@@ -8,9 +8,8 @@ import java.util.Objects;
 public class SANPHAM {
     String masp,malsp,tensp,nhasx;
     int namsx,slconlai;
-    /*
-        
-    */
+    double giaban;
+
     public static ArrayList<SANPHAM> product = new ArrayList<SANPHAM>();
     public SANPHAM() {
         String filePath = "D:\\TDMU\\Nam2\\HK3\\PTTKDT\\Project\\code\\Project_PTTKOOP\\Product.txt";
@@ -18,20 +17,21 @@ public class SANPHAM {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String [] s = line.split("\\|");
-                product.add(new SANPHAM(s[0],s[1],s[2],s[3],Integer.parseInt(s[4]),Integer.parseInt(s[4])));
+                product.add(new SANPHAM(s[0],s[1],s[2],s[3],Integer.parseInt(s[4]),Integer.parseInt(s[4]), Double.parseDouble(s[5])));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public SANPHAM(String masp, String malsp, String tensp, String nhasx, int namsx, int slconlai) {
+    public SANPHAM(String masp, String malsp, String tensp, String nhasx, int namsx, int slconlai,double GiaBan) {
         this.masp = masp;
         this.malsp = malsp;
         this.tensp = tensp;
         this.nhasx = nhasx;
         this.namsx = namsx;
         this.slconlai = slconlai;
+        this.giaban = GiaBan;
     }
 
     public String getMasp() {
@@ -80,6 +80,14 @@ public class SANPHAM {
 
     public void setSlconlai(int slconlai) {
         this.slconlai = slconlai;
+    }
+
+    public double getGiaban() {
+        return this.giaban;
+    }
+
+    public void setGiaban(double giaban) {
+        this.giaban = giaban;
     }
 
     @Override

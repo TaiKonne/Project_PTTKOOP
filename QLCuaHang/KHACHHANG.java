@@ -88,9 +88,10 @@ public class KHACHHANG extends NGUOIDUNG {
                     System.out.println(x.product.get(k));
                 else if(lc==2)
                 {
+                    System.out.print("So luong: "); int slg = sc.nextInt();
                     System.out.println("Da them thanh cong");
                     String magh1 = XulyMaGH();
-                    String tmp = magh1+"|"+this.getmakh()+"|"+x.product.get(k).getMasp()+"|"+Integer.toString(x.product.get(k).getSlconlai());
+                    String tmp = magh1+"|"+this.getmakh()+"|"+x.product.get(k).getMasp()+"|"+Integer.toString(slg);
                     String filePath = "D:\\TDMU\\Nam2\\HK3\\PTTKDT\\Project\\code\\Project_PTTKOOP\\Cart.txt";
                     try (FileWriter myWriter = new FileWriter(filePath, true)) {
                         myWriter.write('\n' + tmp);
@@ -133,6 +134,7 @@ public class KHACHHANG extends NGUOIDUNG {
                         {
                             // System.out.println(x.cart.get(i).getMasp());
                             tmp=tmp + x.cart.get(i).getMasp();
+                            tmp=tmp+"|"+x.cart.get(i).getSl();
                             // System.out.println(tmp);
                             break;
                         }

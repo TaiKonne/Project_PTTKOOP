@@ -7,6 +7,7 @@ import java.util.Objects;
 
 public class DONDATHANG {
     String madh,makh,masp,ngaydat,ngaydukiengiao;
+    int Soluong;
     public static ArrayList<DONDATHANG> order = new ArrayList<DONDATHANG>();
     public DONDATHANG() {
         String filePath = "D:\\TDMU\\Nam2\\HK3\\PTTKDT\\Project\\code\\Project_PTTKOOP\\Order.txt";
@@ -14,17 +15,18 @@ public class DONDATHANG {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String [] s = line.split("\\|");
-                order.add(new DONDATHANG(s[0],s[1],s[2],s[3],s[4]));
+                order.add(new DONDATHANG(s[0],s[1],s[2],Integer.parseInt(s[3]),s[4],s[5]));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public DONDATHANG(String madh, String makh, String masp, String ngaydat, String ngaydukiengiao) {
+    public DONDATHANG(String madh, String makh, String masp,int Sl,String ngaydat, String ngaydukiengiao) {
         this.madh = madh;
         this.makh = makh;
         this.masp = masp;
+        this.Soluong = Sl;
         this.ngaydat = ngaydat;
         this.ngaydukiengiao = ngaydukiengiao;
     }
@@ -51,6 +53,14 @@ public class DONDATHANG {
 
     public void setMasp(String masp) {
         this.masp = masp;
+    }
+
+    public int getSoluong() {
+        return this.Soluong;
+    }
+
+    public void setSoluong(int Soluong) {
+        this.Soluong = Soluong;
     }
 
     public String getNgaydat() {
