@@ -107,12 +107,10 @@ public class KHACHHANG extends NGUOIDUNG {
         else 
         {
             System.out.println("Tim kiem thanh cong!");
-            // System.out.println(x.product.get(k));
-            //return x.product.get(k);
-            System.out.println("Chuc nang:" + '\n'+'\t'+"1. Xem chi tiet" +'\n'+'\t'+"2. Them vao gio hang"+'\n'+'\t'+"0. Thoat");
             while(true)
             {
-                System.out.print("--> "); int lc = sc.nextInt();
+                System.out.println("Chuc nang:" + '\n'+'\t'+"1. Xem chi tiet" +'\n'+'\t'+"2. Them vao gio hang"+'\n'+'\t'+"0. Thoat");
+                System.out.print('\t'+"--> "); int lc = sc.nextInt();
                 if(lc==1)
                     System.out.println(x.product.get(k));
                 else if(lc==2)
@@ -137,10 +135,9 @@ public class KHACHHANG extends NGUOIDUNG {
     public void XemGioHang()
     {
         GIOHANG x = new GIOHANG();
+        System.out.println(" "+"MaGH" + '\t' + "MaKH" + '\t' + "MaSP" + '\t' + "So luong");
         for(int i=0;i<x.cart.size();i++)
         {
-            //System.out.println(123);
-            //System.out.println(x.cart.get(i));
             if(this.getmakh().compareTo(x.cart.get(i).getMakh())==0)
             {
                 System.out.println(x.cart.get(i));
@@ -151,15 +148,16 @@ public class KHACHHANG extends NGUOIDUNG {
         while(true)
         {
             System.out.println("Chuc nang"+'\n'+'\t'+"1. Chon san pham"+'\n'+'\t'+"2. Dat hang"+'\n'+'\t'+"0. Thoat");
-            System.out.print("--> "); int lc = sc.nextInt();
+            System.out.print('\t'+"--> "); int lc = sc.nextInt();
             if(lc==1)
-            {   System.out.println('\t'+"CHON SAN PHAM TU GIO HANG");
+            {   System.out.println('\t'+"*****CHON SAN PHAM TU GIO HANG*****");
                 System.out.print("Nhap ma san pham: "); String masp = sc.next();
                 SANPHAM k = new SANPHAM();
                 for(int i=0;i<k.product.size();i++) 
                 {
                     if(masp.toLowerCase().compareTo(k.product.get(i).getMasp().toLowerCase())==0)
                     {
+                        System.out.println("Chon thanh cong!");
                         tdh = k.product.get(i).getGiaban();
                         break;
                     }
@@ -168,14 +166,11 @@ public class KHACHHANG extends NGUOIDUNG {
                 {
                     if(this.getmakh().toLowerCase().compareTo(x.cart.get(i).getMakh().toLowerCase())==0)
                     {
-                        //System.out.println("aaaaa");
                         if(masp.toLowerCase().compareTo(x.cart.get(i).getMasp().toLowerCase())==0)
                         {
-                            // System.out.println(x.cart.get(i).getMasp());
                             tmp=tmp + x.cart.get(i).getMasp();
                             tmp=tmp+"|"+x.cart.get(i).getSl();
                             tdh*=x.cart.get(i).getSl();
-                            // System.out.println(tmp);
                             break;
                         }
                     }
@@ -255,6 +250,7 @@ public class KHACHHANG extends NGUOIDUNG {
     public void ThanhToan()
     {
         DONDATHANG x = new DONDATHANG();
+        System.out.println(" " + "MaDH" + '\t' + "MaKH" + '\t' + "MaSP" + '\t' + "SL" + '\t' + "Gia tien" + '\t' + "Ngay dat" + '\t'+"Ngay giao du kien");
         for(int i=0;i<x.order.size();i++)
         {
             if(this.getmakh().toLowerCase().compareTo(x.order.get(i).getMakh().toLowerCase())==0)
@@ -267,7 +263,7 @@ public class KHACHHANG extends NGUOIDUNG {
         while(true)
         {
             System.out.println("Chuc nang"+'\n'+'\t'+"1. Chon san pham"+'\n'+'\t'+"2. Thanh toan"+'\n'+'\t'+"0. Thoat");
-            System.out.print("--> "); int lc = sc.nextInt();
+            System.out.print('\t'+"--> "); int lc = sc.nextInt();
             if(lc==1)
             {
                 System.out.println("CHON SAN PHAM DE THANH TOAN!");
@@ -290,9 +286,9 @@ public class KHACHHANG extends NGUOIDUNG {
             {
                 System.out.println("THANH TOAN!");
                 System.out.println("Hinh thuc Thanh Toan: " + '\n' + '\t'+"0. COD"+ '\n'+ '\t' + "1. BANKING");
-                System.out.print("--> "); int ship = sc.nextInt();
+                System.out.print('\t'+"--> "); int ship = sc.nextInt();
                 System.out.println("Su dung VIP: " + '\n' + '\t'+"0. Khong"+ '\n'+ '\t' + "1. Co");
-                System.out.print("--> "); int isvip = sc.nextInt();
+                System.out.print('\t'+"--> "); int isvip = sc.nextInt();
                 if(isvip == 1)
                 {
                     double z=t;

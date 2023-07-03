@@ -93,9 +93,9 @@ public class SANPHAM {
 
     @Override
     public String toString() {
-        return " "  + getMasp() + " " + getMalsp() + " " +
-            getTensp() + " "  + getNhasx() + " " + 
-            getNamsx() + " " + getSlconlai() + " " + getGiaban();
+        return " "  + getMasp() + '\t' + getMalsp() + '\t' +
+            getTensp() + '\t'  + getNhasx() + '\t' + 
+            getNamsx() + '\t' + getSlconlai() + '\t' + getGiaban();
     }
 
 }

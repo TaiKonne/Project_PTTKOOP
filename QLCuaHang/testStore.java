@@ -10,7 +10,7 @@ public class testStore {
         TAIKHOAN j;
         while (true) {
             System.out.println("Chon " + '\n' + '\t' + "1. Dang Nhap" + '\n' + '\t' + "2. Dang Ky" + '\n' + '\t' + "0. Thoat");
-            System.out.print("--> ");
+            System.out.print('\t'+"--> ");
             int k = sc.nextInt();
             if (k == 1) {
                 NGUOIDUNG a = new NGUOIDUNG();
@@ -37,7 +37,7 @@ public class testStore {
             while(true)
             {
                 System.out.println("Chon " + '\n' + '\t' + "1. Tim kiem san pham" + '\n' + '\t' + "2. Vao gio hang"+ '\n' + '\t' + "3. Thanh Toan"+ '\n' + '\t' + "4. Xem thong tin cá nhan" + '\n' + '\t' + "0. Thoat");
-                System.out.print("--> "); int k=sc.nextInt();
+                System.out.print('\t'+"--> "); int k=sc.nextInt();
                 if(k==1)
                 {
                     a.TimKiemSanPham();
