@@ -2,6 +2,8 @@ package QLCuaHang;
 
 import java.util.*;
 
+import NGANHANG.BANKING;
+
 public class testStore {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -29,11 +31,12 @@ public class testStore {
         }
         if(j.getMod()==1)
         {
-            KHACHHANG a = new KHACHHANG(j.getIdUser());
+            BANKING ab = new BANKING("9999",10000);
+            KHACHHANG a = new KHACHHANG(j.getIdUser(),ab);
             a.XemSanPham();
             while(true)
             {
-                System.out.println("Chon " + '\n' + '\t' + "1. Tim kiem san pham" + '\n' + '\t' + "2. Vao gio hang"+ '\n' + '\t' + "0. Thoat");
+                System.out.println("Chon " + '\n' + '\t' + "1. Tim kiem san pham" + '\n' + '\t' + "2. Vao gio hang"+ '\n' + '\t' + "3. Thanh Toan"+ '\n' + '\t' + "4. Xem thong tin cá nhan" + '\n' + '\t' + "0. Thoat");
                 System.out.print("--> "); int k=sc.nextInt();
                 if(k==1)
                 {
@@ -42,6 +45,14 @@ public class testStore {
                 else if(k==2)
                 {
                     a.XemGioHang();
+                }
+                else if(k==3)
+                {
+                    a.ThanhToan();
+                }
+                else if(k==4)
+                {
+                    a.XemThongTinCaNHan();
                 }
                 else return;
             }

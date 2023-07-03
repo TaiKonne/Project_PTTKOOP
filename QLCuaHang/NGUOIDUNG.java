@@ -16,6 +16,7 @@ public class NGUOIDUNG {
     protected String DiaChi;
     static ArrayList<NGUOIDUNG> users = new ArrayList<NGUOIDUNG>();
     public NGUOIDUNG() {
+        users.clear();
         String filePath = "D:\\TDMU\\Nam2\\HK3\\PTTKDT\\Project\\code\\Project_PTTKOOP\\User.txt";
         try (FileReader fileReader = new FileReader(filePath); BufferedReader bufferedReader = new BufferedReader(fileReader)) {
             String line;
@@ -153,4 +154,10 @@ public class NGUOIDUNG {
             return -1;
         }
     }
+
+    @Override
+    public String toString() {
+        return getIdUser() + " " + getHoTen() + " " +getSoDienThoai() + " " +getGioiTinh() + " " +getDiaChi();
+    }
+
 }

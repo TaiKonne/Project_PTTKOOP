@@ -10,6 +10,7 @@ public class GIOHANG {
     int sl;
     public static ArrayList<GIOHANG> cart = new ArrayList<GIOHANG>();
     public GIOHANG() {
+        cart.clear();
         String filePath = "D:\\TDMU\\Nam2\\HK3\\PTTKDT\\Project\\code\\Project_PTTKOOP\\Cart.txt";
         try (FileReader fileReader = new FileReader(filePath); BufferedReader bufferedReader = new BufferedReader(fileReader)) {
             String line;

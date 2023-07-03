@@ -12,6 +12,7 @@ public class SANPHAM {
 
     public static ArrayList<SANPHAM> product = new ArrayList<SANPHAM>();
     public SANPHAM() {
+        product.clear();
         String filePath = "D:\\TDMU\\Nam2\\HK3\\PTTKDT\\Project\\code\\Project_PTTKOOP\\Product.txt";
         try (FileReader fileReader = new FileReader(filePath); BufferedReader bufferedReader = new BufferedReader(fileReader)) {
             String line;
@@ -94,7 +95,7 @@ public class SANPHAM {
     public String toString() {
         return " "  + getMasp() + " " + getMalsp() + " " +
             getTensp() + " "  + getNhasx() + " " + 
-            getNamsx() + " " + getSlconlai();
+            getNamsx() + " " + getSlconlai() + " " + getGiaban();
     }
 
 }
