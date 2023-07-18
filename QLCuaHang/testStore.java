@@ -31,6 +31,16 @@ public class testStore {
         }
         if(j.getMod()==1)
         {
+            System.out.print("Xin chao khach hang: ");
+            NGUOIDUNG xxx = new NGUOIDUNG();
+            for(int i=0;i<xxx.users.size();i++)
+            {
+                if(j.getIdUser().toLowerCase().compareTo(xxx.users.get(i).getIdUser().toLowerCase())==0)
+                {
+                    System.out.println(xxx.users.get(i).getHoTen());
+                    break;
+                }
+            }
             BANKING ab = new BANKING("9999",10000);
             KHACHHANG a = new KHACHHANG(j.getIdUser(),ab);
             a.XemSanPham();
@@ -55,6 +65,58 @@ public class testStore {
                     a.XemThongTinCaNHan();
                 }
                 else return;
+            }
+        }
+        else if(j.getMod()==2)
+        {
+            System.out.print("Xin chao nhan vien ban hang: ");
+            NGUOIDUNG xxx = new NGUOIDUNG();
+            for(int i=0;i<xxx.users.size();i++)
+            {
+                if(j.getIdUser().toLowerCase().compareTo(xxx.users.get(i).getIdUser().toLowerCase())==0)
+                {
+                    System.out.println(xxx.users.get(i).getHoTen());
+                    break;
+                }
+            }
+        }
+        else if(j.getMod()==3)
+        {
+            System.out.print("Xin chao nhan vien thu ngan: ");
+            NGUOIDUNG xxx = new NGUOIDUNG();
+            for(int i=0;i<xxx.users.size();i++)
+            {
+                if(j.getIdUser().toLowerCase().compareTo(xxx.users.get(i).getIdUser().toLowerCase())==0)
+                {
+                    System.out.println(xxx.users.get(i).getHoTen());
+                    break;
+                }
+            }
+        }
+        else if(j.getMod()==4)
+        {
+            System.out.print("Xin chao nhan vien cham soc khach hang: ");
+            NGUOIDUNG xxx = new NGUOIDUNG();
+            for(int i=0;i<xxx.users.size();i++)
+            {
+                if(j.getIdUser().toLowerCase().compareTo(xxx.users.get(i).getIdUser().toLowerCase())==0)
+                {
+                    System.out.println(xxx.users.get(i).getHoTen());
+                    break;
+                }
+            }
+        }
+        else if(j.getMod()==5)
+        {
+            System.out.print("Xin chao nhan vien kho: ");
+            NGUOIDUNG xxx = new NGUOIDUNG();
+            for(int i=0;i<xxx.users.size();i++)
+            {
+                if(j.getIdUser().toLowerCase().compareTo(xxx.users.get(i).getIdUser().toLowerCase())==0)
+                {
+                    System.out.println(xxx.users.get(i).getHoTen());
+                    break;
+                }
             }
         }
     }

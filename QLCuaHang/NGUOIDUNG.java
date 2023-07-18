@@ -71,7 +71,7 @@ public class NGUOIDUNG {
         // for(int i=0;i<x.acc.size();i++) 
         //     System.out.println(x.acc.get(i).getTaiKhoan());
         
-        System.out.println("Nhap Tai Khoan Mat Khau:");
+        System.out.println("***** DANG NHAP *****");
         System.out.print("Tai khoan: "); String tk = sc.nextLine();
         System.out.print("Mat khau: "); String mk = sc.nextLine();
         int k=-1;
@@ -82,16 +82,16 @@ public class NGUOIDUNG {
             }
         }
         if(k==-1){
-            System.out.println("Tai khoan khong ton tai!");
+            System.out.println("***Tai khoan khong ton tai!***");
             return null;
         }else 
         {
             if(mk.compareTo(x.acc.get(k).getMatKhau())==0){
-                System.out.println("Dang nhap thanh cong!");
+                System.out.println("***Dang nhap thanh cong!***");
                 TAIKHOAN tmp = new TAIKHOAN(x.acc.get(k).getIdUser(), x.acc.get(k).getMod());
                 return tmp;
             }else{
-                System.out.println("Sai mat khau");
+                System.out.println("***Sai mat khau***");
                 return null;
             }
         }
@@ -118,7 +118,7 @@ public class NGUOIDUNG {
     }
     public int DangKy()
     {
-        System.out.println("Nhap Tai Khoan Mat Khau:");
+        System.out.println("***** DANG KY *****");
         System.out.print("Tai khoan: "); String tk = sc.nextLine();
         System.out.print("Mat khau: "); String mk = sc.nextLine();
         System.out.print("Nhap lai Mat khau: "); String nmk = sc.nextLine();
@@ -132,7 +132,7 @@ public class NGUOIDUNG {
         }
         if(k==-1){
             if(mk.compareTo(nmk)==0){
-                System.out.println("Dang Ky Thanh Cong!");
+                System.out.println("***Dang Ky Thanh Cong!***");
                 String Id = XuLyIdUser();
                 String tmp = Id +"|"+tk+"|"+mk+"|"+"1";
                 String filePath = "D:\\TDMU\\Nam2\\HK3\\PTTKDT\\Project\\code\\Project_PTTKOOP\\UserAcc.txt";
@@ -146,11 +146,11 @@ public class NGUOIDUNG {
                 return 1;
             }
             else {
-                System.out.println("Mat khau khong khop!");
+                System.out.println("***Mat khau khong khop!***");
                 return -1;
             }
         }else{
-            System.out.println("Tai khoan da ton tai!");
+            System.out.println("***Tai khoan da ton tai!***");
             return -1;
         }
     }
